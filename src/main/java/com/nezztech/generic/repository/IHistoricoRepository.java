@@ -22,7 +22,7 @@ public interface IHistoricoRepository extends JpaRepository<HistoricoApuestaEnti
 	
 	List<HistoricoApuestaEntity> findByIdApuestaCliente(  Long idApuestaCliente ); 
 
-	@Query("SELECT SUM(p.montoGanPer) FROM HistoricoApuestaClienteEntity p WHERE  p.idApuestaCliente = :idApuestaCliente")
+	@Query("SELECT SUM(p.montoGanPer) FROM HistoricoApuestaEntity p WHERE  p.idApuestaCliente = :idApuestaCliente")
    	BigDecimal sumaGananciaPerdida(@Param("idApuestaCliente") Long idApuestaCliente);
 
 }

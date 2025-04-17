@@ -24,7 +24,7 @@ public interface IApuestaRepository extends JpaRepository<ApuestaEntity, Long> {
 	
 	List<ApuestaEntity> findByestatusCompraAndIdUsuarioOrderByFechaCierreDesc( String estatusCompra, Long idUsuario ); 
 	
-	@Query("SELECT SUM(p.gananciaPerdida) FROM ApuestaClienteEntity p WHERE p.idUsuario = :idUsuario")
+	@Query("SELECT SUM(p.gananciaPerdida) FROM ApuestaEntity p WHERE p.idUsuario = :idUsuario")
 	BigDecimal sumaGananciasPerdidasApuestas(@Param("idUsuario") Long idUsuario);
 
 }

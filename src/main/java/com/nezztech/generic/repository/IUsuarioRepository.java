@@ -20,9 +20,9 @@ public interface IUsuarioRepository extends JpaRepository<UsuariosEntity, Long> 
 	
 	List<UsuariosEntity> findByIdAdmin( Long idAdmin );
 	
-	boolean existsByCorreo(String email);
-	 
-	Optional<UsuariosEntity> findByCorreo(String email);	
+//	boolean existsByCorreo(String email);
+//	 
+//	Optional<UsuariosEntity> findByCorreo(String email);	
 
 	
 }
